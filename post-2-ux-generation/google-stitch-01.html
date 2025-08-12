@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MD Notes - Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #10b981;
+            --background-dark: #111827;
+            --background-light: #f9fafb;
+            --text-dark: #f9fafb;
+            --text-light: #1f2937;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glow {
+            box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color), 0 0 20px var(--secondary-color);
+        }
+    </style>
+</head>
+<body class="bg-var(--background-dark) text-var(--text-dark)">
+<div class="relative min-h-screen overflow-hidden">
+<div class="absolute inset-0 z-0 bg-black/70 backdrop-blur-sm"></div>
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-var(--background-dark) opacity-50"></div>
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-[var(--primary-color)] rounded-full blur-[150px] opacity-30"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-[var(--secondary-color)] rounded-full blur-[150px] opacity-30"></div>
+</div>
+<div class="relative z-10 min-h-screen flex flex-col">
+<header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<nav class="relative flex items-center justify-between">
+<div class="flex items-center">
+<span class="material-icons text-[var(--primary-color)] text-4xl">edit_note</span>
+<span class="ml-3 text-3xl font-bold tracking-tighter text-white">MD Notes</span>
+</div>
+</nav>
+</header>
+<main class="flex-grow flex items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<p class="text-lg font-semibold text-[var(--primary-color)] uppercase tracking-wider">Effortless Markdown</p>
+<h1 class="mt-4 text-5xl tracking-tight font-extrabold text-white sm:text-6xl md:text-7xl">
+<span class="block">Focus on Your Ideas,</span>
+<span class="block bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)]">Not Your Formatting.</span>
+</h1>
+<p class="mt-6 max-w-md mx-auto text-lg text-gray-300 sm:text-xl md:mt-8 md:max-w-3xl">
+                            MD Notes is your minimalist sanctuary for writing. A clean, intuitive, and powerful markdown editor designed to keep you in the flow. From quick thoughts to detailed documents, we've got you covered.
+                        </p>
+<div class="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-10">
+<div class="rounded-md">
+<a class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-md text-white bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)] transition-all duration-300 md:py-4 md:text-xl md:px-10 transform hover:scale-105" href="#">
+                                    Get Started for Free
+                                </a>
+</div>
+</div>
+<p class="mt-6 text-sm text-gray-400">No credit card required.</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
