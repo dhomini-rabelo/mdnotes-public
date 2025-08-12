@@ -1,0 +1,44 @@
+{
+  "name": "mdnotes-landing",
+  "version": "1.0.0",
+  "description": "Professional landing page for MD Notes - A SaaS platform for markdown note-taking",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/",
+    "build": "echo 'Static site - no build process needed'",
+    "test": "echo 'No tests specified'",
+    "validate": "npx html-validate index.html",
+    "lighthouse": "npx lighthouse http://localhost:3000 --output=html --output-path=lighthouse-report.html"
+  },
+  "keywords": [
+    "markdown",
+    "notes",
+    "saas",
+    "landing-page",
+    "note-taking",
+    "documentation",
+    "writing",
+    "productivity"
+  ],
+  "author": "MD Notes Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "html-validate": "^8.7.4",
+    "lighthouse": "^11.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdnotes/landing-page.git"
+  },
+  "homepage": "https://mdnotes.com",
+  "bugs": {
+    "url": "https://github.com/mdnotes/landing-page/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
