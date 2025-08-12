@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="MD Notes — a simple SaaS to create, organize, and share beautiful markdown notes." />
+    <title>MD Notes — Markdown notes for everyone</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23111'/><text x='50' y='58' font-family='monospace' font-size='44' text-anchor='middle' fill='white'>MD</text></svg>">
+  </head>
+  <body>
+    <main class="hero" role="main">
+      <div class="container">
+        <header class="brand">
+          <div class="logo" aria-hidden="true">📝</div>
+          <span class="name">MD Notes</span>
+        </header>
+
+        <section class="pitch" aria-labelledby="title">
+          <div class="pitch-copy">
+            <h1 id="title">Write beautiful Markdown notes. Share instantly.</h1>
+            <p class="subtitle">
+              MD Notes is the fastest way to capture ideas in Markdown — clean editor, keyboard‑first workflow, instant sync, and shareable links.
+            </p>
+            <div class="cta">
+              <a class="btn btn-primary" href="#" id="get-started-btn" role="button" aria-label="Get started with MD Notes">Start free</a>
+              <span class="cta-note">Free forever for personal notes</span>
+            </div>
+            <ul class="features" aria-label="Key benefits">
+              <li>Blazing fast editor</li>
+              <li>Markdown + shortcuts</li>
+              <li>Shareable links</li>
+              <li>Export to Markdown/HTML</li>
+            </ul>
+          </div>
+          <figure class="hero-illustration" aria-hidden="true">
+            <svg width="520" height="360" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#6aa0ff" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#4f87f0" stop-opacity="0.9"/>
+                </linearGradient>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#08101f" flood-opacity="0.6"/>
+                </filter>
+              </defs>
+              <rect x="20" y="20" width="480" height="320" rx="16" fill="#0f1218" stroke="rgba(255,255,255,0.08)"/>
+              <rect x="36" y="48" width="156" height="24" rx="6" fill="url(#g1)" filter="url(#shadow)"/>
+              <rect x="36" y="92" width="324" height="12" rx="6" fill="rgba(255,255,255,0.12)"/>
+              <rect x="36" y="114" width="280" height="12" rx="6" fill="rgba(255,255,255,0.1)"/>
+              <rect x="36" y="136" width="360" height="12" rx="6" fill="rgba(255,255,255,0.08)"/>
+              <rect x="36" y="170" width="448" height="120" rx="10" fill="#0b0e14" stroke="rgba(255,255,255,0.06)"/>
+              <text x="56" y="202" fill="#6aa0ff" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="16">```markdown</text>
+              <rect x="56" y="214" width="280" height="10" rx="5" fill="rgba(106,160,255,0.25)"/>
+              <rect x="56" y="232" width="220" height="10" rx="5" fill="rgba(106,160,255,0.2)"/>
+              <rect x="56" y="250" width="260" height="10" rx="5" fill="rgba(106,160,255,0.15)"/>
+              <text x="56" y="288" fill="#6aa0ff" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="16">```</text>
+              <g>
+                <rect x="390" y="270" width="88" height="32" rx="8" fill="url(#g1)"/>
+                <text x="434" y="292" text-anchor="middle" fill="#0b0c10" font-weight="700" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="14">MD</text>
+              </g>
+            </svg>
+          </figure>
+        </section>
+      </div>
+      <footer class="footer">
+        <small>© <span id="year"></span> MD Notes. All rights reserved.</small>
+      </footer>
+    </main>
+
+    <script>
+      // Keep JS optional and tiny; set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,138 @@
+:root {
+  --bg: #0b0c10;
+  --panel: #111317;
+  --text: #e6ebf2;
+  --muted: #a5b1c2;
+  --primary: #6aa0ff;
+  --primary-600: #4f87f0;
+  --ring: rgba(106, 160, 255, 0.5);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(106,160,255,0.12), transparent 50%),
+              radial-gradient(800px 600px at 90% 10%, rgba(106,160,255,0.08), transparent 50%),
+              var(--bg);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 72px;
+}
+.logo { font-size: 22px; }
+.name { font-weight: 600; letter-spacing: 0.2px; color: var(--muted); }
+
+.pitch h1 {
+  font-size: clamp(28px, 4vw + 1rem, 56px);
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+.subtitle {
+  font-size: clamp(16px, 1.2vw + 0.8rem, 20px);
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+.cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.08s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-600));
+  color: #0b0c10;
+  box-shadow: 0 10px 30px -10px var(--ring), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.cta-note { color: var(--muted); font-size: 14px; }
+
+/* .get-started section removed to keep single-section layout */
+
+/* Layout enhancements for hero */
+.pitch {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.pitch-copy { max-width: 640px; }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+
+.features li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.hero-illustration {
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 30px 80px -30px rgba(8, 16, 31, 0.7);
+  padding: 12px;
+}
+
+.hero-illustration svg { max-width: 100%; height: auto; display: block; }
+
+@media (min-width: 900px) {
+  .pitch {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 32px;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}
+
+
