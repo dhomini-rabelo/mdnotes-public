@@ -4,18 +4,22 @@ Uma plataforma para criar notas em Markdown.
 
 ## Páginas
 
-- Landing Page Simples com login: Página inicial do projeto com informações sobre o projeto.
-  - Usuários fazem login com do google.
-  - Usuários deve ter ID de projeto do Firebase único.
+- Landing Page Simples: Página inicial do projeto com informações sobre o projeto.
+  
+- Página de Login: Permite que os usuários façam login na plataforma.
+  - Usuários fazem login com do google em plataforma de terceiros.
+  - Usuários com perfil completo devem ter um username único, e devem informar sua área de trabalho(ex: T.I)
 
-- Página Editor de Notas
+- Página de Gerenciamento de Notas
   - Header:
     - Logo do projeto.
     - Workspace selecionado, com opção de selecionar outro workspace.
     - Botão "Por que Markdown?"
       - Modal com informações sobre o que é Markdown e como utilizá-lo.
       - Link para o site oficial do Markdown, com tudo que o markdown possui.
-    - Foto do usuário
+    - Opção de congiguração do usuário que abre modal:
+        - Sair da conta.
+        - Tema editor de código: light ou dark. Default: dark.
   - Sidebar (esquerda):
     - pastas (folders) do workspace selecionado.
     - notas (notes) da pasta selecionada.
@@ -40,8 +44,8 @@ Uma plataforma para criar notas em Markdown.
 ## Regras de negócio
 
 - Usuários podem separar notas por workspaces e pastas.
-- O usuário pode criar apenas 3 workspace, 4 pastas por workspace e 3 notas por pasta na versão 1.
-- Notas podem ter até 5.000 caracteres.
+- O usuário pode criar apenas 1 workspace, 1 pasta e 1 notas na versão 1.
+- Notas podem ter até 1.000 caracteres.
 
 ## Stack
 
@@ -55,31 +59,24 @@ Uma plataforma para criar notas em Markdown.
 
 - Usuários
   - id: string (UUID)
-  - username: string
-  - name: string
-  - email: string
-  - photo_url: string
-  - created_at: timestamp
-  - updated_at: timestamp
+  - username: string (único)
+  - email: string (único)
 
 - Workspaces
   - id: string (UUID)
+  - icon: string
   - owner_id: string (referência ao usuário)
   - name: string (nome do workspace)
-  - created_at: timestamp
-  - updated_at: timestamp
 
 - Pastas
   - id: string (UUID)
+  - icon: string
   - workspace_id: string (referência ao workspace)
   - owner_id: string (referência ao usuário)
   - name: string (nome da pasta)
-  - created_at: timestamp
-  - updated_at: timestamp
 
 - Nota
   - id: string (UUID)
-  - owner_id: string (referência ao usuário)
   - folder_id: string (referência à pasta)
   - title: string (título da nota)
   - content: string (conteúdo em Markdown)
@@ -88,20 +85,21 @@ Uma plataforma para criar notas em Markdown.
 
 ## Casos de uso (Backend)
 
-### Auth domain
-
-- Login ou Cadastro com Google
-
-### Notes domain
+- Usuário
+  - Login
+  - Criação
+  - Verificação de dados completos
 
 - Workspace
-  - Criação com pasta e nota inicial
-  - Listagem geral com pastas e notas por usuário
+  - Criação
+  - Listagem de workspaces por ID de usuário
 
 - Pasta
-  - Criação com nota inicial
+  - Criação
+  - Listagem de pastas por ID de workspace com notas (apenas título e ID)
 
 - Nota
   - Criação
   - Edição
-  - Detalhes
+  - Obter nota por ID (título e conteúdo)
+
